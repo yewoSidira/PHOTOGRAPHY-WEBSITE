@@ -1,0 +1,58 @@
+/* Booking.css */
+.booking-form {
+    color: #ccc;
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: #fff;
+    background: url('./hero-bg.jpg') no-repeat center center/cover;
+}
+
+.booking-form h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+#bookingForm {
+   
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 50%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.booking-form button {
+    padding: 1rem 2rem;
+    background-color: #ff6f61;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.booking-form button:hover {
+    background-color: #ff6f61;
+}

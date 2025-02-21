@@ -1,0 +1,31 @@
+/* Header.css */
+header {
+    background-color: #545454;
+    color: #fff;
+    padding: 1rem 2rem;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    height: 100px;
+    width: 100px;
+     /* Adjust the size as needed */
+}
+
+header nav a {
+    color: #fff;
+    margin-left: 1.5rem;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: #ff6f61;
+}
