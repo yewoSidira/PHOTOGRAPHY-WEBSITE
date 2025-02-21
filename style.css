@@ -1,0 +1,319 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url('photo3.jpg') no-repeat center center/cover;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #fcfcfc;
+ background-color: #f9f9f9;
+}   
+
+h1, h2, h3 {
+    font-weight: 600;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Hero Section */
+.hero {
+    height: 70vh;
+   /* background: url('photo3.jpg') no-repeat center center/cover;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    
+}
+
+/* Responsive Font Size for Hero Title */
+.hero-content h1 {
+    font-size: 8rem; /* Default size for smaller screens */
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+@media (min-width: 768px) {
+    .hero-content h1 {
+        font-size: 6rem; /* Larger size for tablets and desktops */
+    }
+}
+
+.hero-content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.hero-content button {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    background-color: #ff6f61;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.hero-content button:hover {
+    background-color: #ff4a3d;
+}
+
+/* Gallery Section */
+.gallery {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.gallery h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05);
+}
+
+/* Services Section */
+.what-we-do {
+    padding: 4rem 2rem;
+    text-align: center;
+   /* background-color: #fff; */
+}
+
+.what-we-do h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.what-we-do p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.service-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.service-item {
+    padding: 1.5rem;
+    background-color: #ff6f61;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+.service-item:hover {
+    transform: translateY(-10px);
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.footer-about, .contact-info {
+    flex: 1;
+    min-width: 250px;
+    margin: 1rem;
+}
+
+.contact-info a {
+    color: #ff6f61;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: #ff4a3d;
+}
+
+.copyright {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+/* booking page*/
+
+/* Header */
+
+
+
+header {
+    background-color: #333;
+    color: #f6f5f5;
+    padding: 1rem 2rem;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header h1 {
+    font-size: 2rem;
+}
+
+header nav a {
+    color: #fff;
+    margin-left: 1.5rem;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: #ff6f61;
+}
+
+/* Services and Pricing Section */
+.services-pricing {
+    padding: 4rem 2rem;
+    text-align: center;
+  /*  background-color: #010000; */
+    background: url('photo3.jpg') no-repeat center center/cover;
+    color: rgb(248, 238, 238);
+}
+
+.services-pricing h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.pricing-table {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.pricing-card {
+    background-color: #4a2e2e;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+}
+
+.pricing-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.pricing-card .price {
+    font-size: 1.2rem;
+    color: #ff6f61;
+    margin-bottom: 1rem;
+}
+
+.pricing-card button {
+    padding: 0.5rem 1rem;
+    background-color: #ff6f61;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.pricing-card button:hover {
+    background-color: #ff4a3d;
+}
+
+/* Booking Form Section */
+.booking-form {
+    padding: 4rem 2rem;
+    text-align: center;
+   /* background-color: #fff; */
+}
+
+.booking-form h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+#bookingForm {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #fdfcfc;
+    background-color:  #4a2e2e;
+    border-radius: 5px;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.booking-form button {
+    padding: 1rem 2rem;
+    background-color: #ff6f61;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.booking-form button:hover {
+    background-color: #ff4a3d;
+}

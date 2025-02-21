@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/yewoSidira/PHOTOGRAPHY-WEBSITE.git/static/css/main.5fea4db8.css",
+    "main.js": "/yewoSidira/PHOTOGRAPHY-WEBSITE.git/static/js/main.ac41f682.js",
+    "static/js/488.fdafc0d3.chunk.js": "/yewoSidira/PHOTOGRAPHY-WEBSITE.git/static/js/488.fdafc0d3.chunk.js",
+    "static/media/logo.jpg": "/yewoSidira/PHOTOGRAPHY-WEBSITE.git/static/media/logo.80808a8df3ad11d42821.jpg",
+    "static/media/AboutUs1.jpg": "/yewoSidira/PHOTOGRAPHY-WEBSITE.git/static/media/AboutUs1.a6d77634ec796fa28426.jpg",
+    "static/media/hero-bg.jpg": "/yewoSidira/PHOTOGRAPHY-WEBSITE.git/static/media/hero-bg.fc62fab1a7c3467db1e9.jpg",
+    "static/media/AboutUs2.jpg": "/yewoSidira/PHOTOGRAPHY-WEBSITE.git/static/media/AboutUs2.fb5b19c0277bfae63457.jpg",
+    "index.html": "/yewoSidira/PHOTOGRAPHY-WEBSITE.git/index.html",
+    "main.5fea4db8.css.map": "/yewoSidira/PHOTOGRAPHY-WEBSITE.git/static/css/main.5fea4db8.css.map",
+    "main.ac41f682.js.map": "/yewoSidira/PHOTOGRAPHY-WEBSITE.git/static/js/main.ac41f682.js.map",
+    "488.fdafc0d3.chunk.js.map": "/yewoSidira/PHOTOGRAPHY-WEBSITE.git/static/js/488.fdafc0d3.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5fea4db8.css",
+    "static/js/main.ac41f682.js"
+  ]
+}
