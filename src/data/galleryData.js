@@ -5,6 +5,7 @@ import Photo3 from '../assets/images/gallery/photo3.jpg';
 import Photo10 from '../assets/images/gallery/photo10.jpg';
 import Photo12 from '../assets/images/gallery/photo12.jpg';
 import omarHakeem from '../assets/images/gallery/omar-hakeem-tXUZt640l1A-unsplash.jpg';
+import premiumPhoto from '../assets/images/gallery/premium_photo-1757100708310-c991afe87ad0.png';
 
 export const galleryImages = [
   {
@@ -36,7 +37,7 @@ export const galleryImages = [
     src: omarHakeem,
     alt: "Professional photography session",
     category: "Professional"
-  }
+  },
 ];
 
 // Optional: If you want to add more images later, just:
