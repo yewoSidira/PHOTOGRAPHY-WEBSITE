@@ -38,6 +38,13 @@ export const galleryImages = [
     alt: "Professional photography session",
     category: "Professional"
   },
+
+   {
+    id: 6,
+    src: premiumPhoto,
+    alt: "Premium photography showcase - capturing special moments in Malawi",
+    category: "Featured"
+  }
 ];
 
 // Optional: If you want to add more images later, just:
