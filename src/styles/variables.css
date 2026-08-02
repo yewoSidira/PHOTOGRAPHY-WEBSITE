@@ -1,0 +1,40 @@
+/* src/styles/variables.css */
+:root {
+  /* Colors - Malawi inspired */
+  --color-primary: #1a2a3a;
+  --color-secondary: #2c3e50;
+  --color-accent: #c75b3a;
+  --color-accent-light: #e8a87c;
+  --color-gold: #d4af37;
+  
+  --color-bg: #faf8f5;
+  --color-bg-dark: #1a2a3a;
+  --color-text: #2c3e50;
+  --color-text-light: #ffffff;
+  --color-gray: #7f8c8d;
+  
+  /* Fonts */
+  --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-heading: 'Playfair Display', Georgia, serif;
+  
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --spacing-lg: 4rem;
+  --spacing-xl: 6rem;
+  
+  /* Border Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  
+  /* Shadows */
+  --shadow-sm: 0 2px 4px rgba(0,0,0,0.1);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.15);
+  --shadow-lg: 0 8px 24px rgba(0,0,0,0.2);
+  
+  /* Transitions */
+  --transition-smooth: 0.3s ease;
+  --transition-bounce: 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
