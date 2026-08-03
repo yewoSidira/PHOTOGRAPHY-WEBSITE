@@ -1,163 +1,332 @@
-/* ===========================
-   Gallery Section
-=========================== */
+/* ==========================================================
+   GALLERY
+========================================================== */
 
-.gallery-section {
-  background: var(--color-bg);
+.gallery-section{
+    background:var(--color-bg);
+    padding:7rem 0;
 }
 
-.gallery-grid {
-  display: grid;
-
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-
-  gap: 1.5rem;
+.gallery-section .section-title{
+    margin-bottom:.75rem;
 }
 
-/* ===========================
-   Gallery Card
-=========================== */
+.gallery-section .section-subtitle{
 
-.gallery-item {
-  position: relative;
+    max-width:700px;
 
-  overflow: hidden;
+    margin:0 auto 4rem;
 
-  aspect-ratio: 1 / 1;
+    text-align:center;
 
-  border-radius: 18px;
+    line-height:1.8;
 
-  cursor: pointer;
-
-  background: #ddd;
-
-  box-shadow: 0 12px 30px rgba(0,0,0,.08);
-
-  transition:
-      transform .35s ease,
-      box-shadow .35s ease;
-}
-
-.gallery-item:hover {
-  transform: translateY(-8px);
-
-  box-shadow:
-      0 20px 45px rgba(0,0,0,.18);
-}
-
-/* ===========================
-   Image
-=========================== */
-
-.gallery-item img {
-  width: 100%;
-  height: 100%;
-
-  object-fit: cover;
-
-  transition:
-      transform .6s ease,
-      filter .6s ease;
-}
-
-.gallery-item:hover img {
-
-  transform: scale(1.08);
-
-  filter:
-      brightness(.72)
-      saturate(1.15);
+    color:var(--color-gray);
 
 }
 
-/* ===========================
-   Overlay
-=========================== */
+/* ==========================================================
+   GRID
+========================================================== */
 
-.gallery-overlay {
-  position: absolute;
+.gallery-grid{
 
-  inset: 0;
+    display:grid;
 
-  display: flex;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
 
-  justify-content: flex-end;
-
-  align-items: flex-start;
-
-  padding: 1rem;
-
-  background:
-      linear-gradient(
-          transparent,
-          rgba(0,0,0,.15),
-          rgba(0,0,0,.55)
-      );
-
-  opacity: 0;
-
-  transition: opacity .35s ease;
-}
-
-.gallery-item:hover .gallery-overlay {
-
-  opacity: 1;
+    gap:1.75rem;
 
 }
 
-/* ===========================
-   Category
-=========================== */
+/* ==========================================================
+   CARD
+========================================================== */
 
-.gallery-category {
+.gallery-item{
 
-  background:
-      rgba(255,255,255,.12);
+    position:relative;
 
-  color: white;
+    overflow:hidden;
 
-  backdrop-filter: blur(10px);
+    aspect-ratio:1/1;
 
-  border: 1px solid rgba(255,255,255,.15);
+    border-radius:16px;
 
-  padding: .45rem 1rem;
+    cursor:pointer;
 
-  border-radius: 999px;
+    background:#ddd;
 
-  font-size: .8rem;
+    border:2px solid transparent;
 
-  font-weight: 600;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
 
-  letter-spacing: .5px;
+    transition:
+    transform .35s ease,
+    border-color .35s ease,
+    box-shadow .35s ease;
+
 }
 
-/* ===========================
-   Focus
-=========================== */
+.gallery-item:hover{
 
-.gallery-item:focus-visible {
-  outline: 3px solid var(--color-gold);
+    transform:translateY(-8px);
 
-  outline-offset: 4px;
+    border-color:rgba(212,175,55,.55);
+
+    box-shadow:0 20px 45px rgba(0,0,0,.16);
+
 }
 
-/* ===========================
-   Mobile
-=========================== */
+/* ==========================================================
+   IMAGE
+========================================================== */
 
-@media (max-width:768px){
+.gallery-item img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    transition:
+    transform .7s ease,
+    filter .6s ease;
+
+}
+
+.gallery-item:hover img{
+
+    transform:scale(1.06);
+
+    filter:
+    brightness(.8)
+    saturate(1.08);
+
+}
+
+/* ==========================================================
+   OVERLAY
+========================================================== */
+
+.gallery-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+
+    align-items:flex-end;
+
+    justify-content:flex-start;
+
+    padding:1.25rem;
+
+    background:
+
+    linear-gradient(
+    to top,
+    rgba(0,0,0,.72),
+    rgba(0,0,0,.15),
+    transparent 58%
+    );
+
+    opacity:0;
+
+    transition:.35s ease;
+
+}
+
+.gallery-item:hover .gallery-overlay,
+.gallery-item:focus-visible .gallery-overlay{
+
+    opacity:1;
+
+}
+
+/* ==========================================================
+   CATEGORY
+========================================================== */
+
+.gallery-category{
+
+    padding:.45rem 1rem;
+
+    border-radius:999px;
+
+    background:rgba(255,255,255,.14);
+
+    border:1px solid rgba(255,255,255,.18);
+
+    backdrop-filter:blur(12px);
+
+    color:white;
+
+    font-size:.8rem;
+
+    font-weight:600;
+
+    letter-spacing:.5px;
+
+}
+
+/* ==========================================================
+   FOOTER
+========================================================== */
+
+.gallery-footer{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:1rem;
+
+    margin-top:4rem;
+
+    flex-wrap:wrap;
+
+}
+
+/* ==========================================================
+   BUTTONS
+========================================================== */
+
+.gallery-btn{
+
+    display:inline-flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    min-width:220px;
+
+    padding:1rem 2rem;
+
+    border-radius:999px;
+
+    font-weight:600;
+
+    transition:.3s ease;
+
+    cursor:pointer;
+
+    text-decoration:none;
+
+}
+
+/* Secondary */
+
+.gallery-btn-secondary{
+
+    background:transparent;
+
+    color:var(--color-primary);
+
+    border:2px solid var(--color-primary);
+
+}
+
+.gallery-btn-secondary:hover{
+
+    background:var(--color-primary);
+
+    color:white;
+
+}
+
+/* Primary */
+
+.gallery-btn-primary{
+
+    background:var(--color-accent);
+
+    color:white;
+
+    border:2px solid var(--color-accent);
+
+}
+
+.gallery-btn-primary:hover{
+
+    transform:translateY(-3px);
+
+    background:#b44d31;
+
+    border-color:#b44d31;
+
+}
+
+/* ==========================================================
+   ACCESSIBILITY
+========================================================== */
+
+.gallery-item:focus-visible{
+
+    outline:3px solid var(--color-gold);
+
+    outline-offset:5px;
+
+}
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media(max-width:768px){
+
+.gallery-section{
+
+padding:5rem 0;
+
+}
 
 .gallery-grid{
 
 grid-template-columns:1fr;
 
-gap:1rem;
+gap:1.2rem;
 
 }
 
 .gallery-item{
 
 aspect-ratio:4/5;
+
+}
+
+.gallery-overlay{
+
+opacity:1;
+
+padding:1rem;
+
+background:
+linear-gradient(
+to top,
+rgba(0,0,0,.65),
+transparent 60%
+);
+
+}
+
+.gallery-footer{
+
+flex-direction:column;
+
+gap:1rem;
+
+}
+
+.gallery-btn{
+
+width:100%;
+
+max-width:340px;
 
 }
 

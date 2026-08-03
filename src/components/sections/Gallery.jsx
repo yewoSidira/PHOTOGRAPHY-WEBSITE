@@ -1,18 +1,20 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { galleryImages } from "../../data/galleryData";
 import "./Gallery.css";
 
 const Gallery = () => {
   return (
     <section className="gallery-section section-padding" id="gallery">
+
       <div className="container">
 
         <h2 className="section-title">
-          Our Portfolio
+          Featured Work
         </h2>
 
         <p className="section-subtitle">
-          Capturing Malawi's beauty, one frame at a time.
+          A selection of some of our favourite moments. Every photograph tells a story, and every story deserves to be remembered.
         </p>
 
         <div className="gallery-grid">
@@ -45,7 +47,26 @@ const Gallery = () => {
 
         </div>
 
+        <div className="gallery-footer">
+
+          <button
+            className="gallery-btn gallery-btn-secondary"
+            type="button"
+          >
+            View Full Gallery
+          </button>
+
+          <Link
+            to="/booking"
+            className="gallery-btn gallery-btn-primary"
+          >
+            Book Your Session
+          </Link>
+
+        </div>
+
       </div>
+
     </section>
   );
 };
