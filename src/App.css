@@ -1,4 +1,4 @@
-/* src/App.css - Clean and minimal */
 .App {
-  overflow-x: hidden;
+  width: 100%;
+  overflow-x: clip;
 }
