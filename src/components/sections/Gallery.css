@@ -1,57 +1,164 @@
-/* src/components/sections/Gallery.css */
+/* ===========================
+   Gallery Section
+=========================== */
+
 .gallery-section {
-  background-color: var(--color-bg);
+  background: var(--color-bg);
 }
 
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: var(--spacing-md);
+
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+  gap: 1.5rem;
 }
+
+/* ===========================
+   Gallery Card
+=========================== */
 
 .gallery-item {
   position: relative;
+
   overflow: hidden;
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-sm);
-  transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
+
   aspect-ratio: 1 / 1;
-  background-color: var(--color-gray);
+
+  border-radius: 18px;
+
+  cursor: pointer;
+
+  background: #ddd;
+
+  box-shadow: 0 12px 30px rgba(0,0,0,.08);
+
+  transition:
+      transform .35s ease,
+      box-shadow .35s ease;
 }
 
 .gallery-item:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-lg);
+  transform: translateY(-8px);
+
+  box-shadow:
+      0 20px 45px rgba(0,0,0,.18);
 }
+
+/* ===========================
+   Image
+=========================== */
 
 .gallery-item img {
   width: 100%;
   height: 100%;
+
   object-fit: cover;
-  transition: transform 0.5s ease;
+
+  transition:
+      transform .6s ease,
+      filter .6s ease;
 }
 
 .gallery-item:hover img {
-  transform: scale(1.05);
+
+  transform: scale(1.08);
+
+  filter:
+      brightness(.72)
+      saturate(1.15);
+
 }
+
+/* ===========================
+   Overlay
+=========================== */
+
+.gallery-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  display: flex;
+
+  justify-content: flex-end;
+
+  align-items: flex-start;
+
+  padding: 1rem;
+
+  background:
+      linear-gradient(
+          transparent,
+          rgba(0,0,0,.15),
+          rgba(0,0,0,.55)
+      );
+
+  opacity: 0;
+
+  transition: opacity .35s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+
+  opacity: 1;
+
+}
+
+/* ===========================
+   Category
+=========================== */
 
 .gallery-category {
-  position: absolute;
-  bottom: var(--spacing-sm);
-  left: var(--spacing-sm);
-  background: rgba(0,0,0,0.8);
+
+  background:
+      rgba(255,255,255,.12);
+
   color: white;
-  padding: 0.25rem 0.75rem;
-  border-radius: var(--radius-sm);
-  font-size: 0.8rem;
-  font-weight: 500;
-  letter-spacing: 0.5px;
-  backdrop-filter: blur(4px);
+
+  backdrop-filter: blur(10px);
+
+  border: 1px solid rgba(255,255,255,.15);
+
+  padding: .45rem 1rem;
+
+  border-radius: 999px;
+
+  font-size: .8rem;
+
+  font-weight: 600;
+
+  letter-spacing: .5px;
 }
 
-@media (max-width: 768px) {
-  .gallery-grid {
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: var(--spacing-sm);
-  }
+/* ===========================
+   Focus
+=========================== */
+
+.gallery-item:focus-visible {
+  outline: 3px solid var(--color-gold);
+
+  outline-offset: 4px;
+}
+
+/* ===========================
+   Mobile
+=========================== */
+
+@media (max-width:768px){
+
+.gallery-grid{
+
+grid-template-columns:1fr;
+
+gap:1rem;
+
+}
+
+.gallery-item{
+
+aspect-ratio:4/5;
+
+}
+
 }
