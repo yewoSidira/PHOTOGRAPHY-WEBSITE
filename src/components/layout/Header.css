@@ -1,11 +1,19 @@
 /* src/components/layout/Header.css */
 .header {
-  background-color: var(--color-bg-dark);
+  background-color: rgba(26, 42, 58, 0.96);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
   color: var(--color-text-light);
   padding: var(--spacing-sm) 0;
+
   position: sticky;
   top: 0;
-  z-index: 1000;
+
+  width: 100%;
+
+  z-index: 9999;
+
   box-shadow: var(--shadow-sm);
 }
 

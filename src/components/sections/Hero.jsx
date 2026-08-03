@@ -5,7 +5,6 @@ import './Hero.css';
 const Hero = () => {
   return (
     <section className="hero">
-      <div className="hero-overlay"></div>
       <div className="container hero-content">
         <div className="hero-text">
           <h1>23/11 Photography</h1>
