@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Header from './components/layout/Header';
+import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
 import Hero from './components/sections/Hero';
 import Gallery from './components/sections/Gallery';
@@ -15,7 +15,7 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Header />
+        <Navbar />
         <Routes>
           <Route path="/" element={
             <>
