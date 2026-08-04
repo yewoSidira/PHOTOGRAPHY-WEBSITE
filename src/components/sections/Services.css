@@ -1,66 +1,257 @@
-/* src/components/sections/Services.css */
-.services-section {
-  background-color: var(--color-bg);
+/* ==========================================================
+   SERVICES
+========================================================== */
+
+.services-section{
+
+background:var(--color-bg);
+
 }
 
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: var(--spacing-md);
+.services-section .section-subtitle{
+
+max-width:640px;
+
+margin:0 auto 4rem;
+
 }
 
-.service-card {
-  background-color: white;
-  padding: var(--spacing-md);
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-sm);
-  text-align: center;
-  transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+/* ==========================================================
+   GRID
+========================================================== */
+
+.services-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+gap:2rem;
+
 }
 
-.service-card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-lg);
+/* ==========================================================
+   CARD
+========================================================== */
+
+.service-card{
+
+position:relative;
+
+background:white;
+
+border-radius:20px;
+
+padding:2rem;
+
+display:flex;
+
+flex-direction:column;
+
+border:1px solid rgba(0,0,0,.06);
+
+box-shadow:0 10px 30px rgba(0,0,0,.05);
+
+transition:.35s ease;
+
+overflow:hidden;
+
 }
 
-.service-icon {
-  font-size: 2.5rem;
-  margin-bottom: var(--spacing-sm);
+.service-card:hover{
+
+transform:translateY(-8px);
+
+box-shadow:0 20px 45px rgba(0,0,0,.12);
+
 }
 
-.service-card h3 {
-  font-family: var(--font-primary);
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
-  color: var(--color-primary);
+.featured{
+
+border:2px solid var(--color-gold);
+
 }
 
-.service-description {
-  font-size: 0.95rem;
-  color: var(--color-gray);
-  margin-bottom: var(--spacing-sm);
-  flex-grow: 1;
+/* ==========================================================
+   BADGE
+========================================================== */
+
+.service-badge{
+
+position:absolute;
+
+top:20px;
+
+right:20px;
+
+background:var(--color-gold);
+
+color:#111;
+
+padding:.45rem .9rem;
+
+border-radius:999px;
+
+font-size:.75rem;
+
+font-weight:700;
+
 }
 
-.service-price {
-  font-size: 1.3rem;
-  font-weight: 700;
-  color: var(--color-accent);
-  margin-bottom: var(--spacing-sm);
+/* ==========================================================
+   TEXT
+========================================================== */
+
+.service-card h3{
+
+font-size:1.4rem;
+
+margin-bottom:1rem;
+
 }
 
-.service-cta {
-  width: 100%;
-  text-align: center;
-  padding: 0.6rem;
-  font-size: 0.95rem;
+.service-description{
+
+line-height:1.7;
+
+color:var(--color-gray);
+
+margin-bottom:2rem;
+
 }
 
-@media (max-width: 768px) {
-  .services-grid {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  }
+.service-price{
+
+font-size:2rem;
+
+font-weight:700;
+
+color:var(--color-accent);
+
+margin-bottom:1.5rem;
+
+}
+
+/* ==========================================================
+   LIST
+========================================================== */
+
+.service-list{
+
+list-style:none;
+
+padding:0;
+
+margin:0 0 2rem;
+
+display:flex;
+
+flex-direction:column;
+
+gap:.8rem;
+
+}
+
+.service-list li{
+
+position:relative;
+
+padding-left:1.5rem;
+
+color:var(--color-text);
+
+}
+
+.service-list li::before{
+
+content:"";
+
+position:absolute;
+
+left:0;
+
+top:.55rem;
+
+width:8px;
+
+height:8px;
+
+border-radius:50%;
+
+background:var(--color-gold);
+
+}
+
+/* ==========================================================
+   BUTTON
+========================================================== */
+
+.service-button{
+
+margin-top:auto;
+
+display:block;
+
+text-align:center;
+
+padding:1rem;
+
+border-radius:999px;
+
+background:var(--color-primary);
+
+color:white;
+
+font-weight:600;
+
+transition:.3s;
+
+}
+
+.service-button:hover{
+
+background:var(--color-accent);
+
+transform:translateY(-2px);
+
+}
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media(max-width:768px){
+
+.services-grid{
+
+grid-template-columns:1fr;
+
+gap:1.5rem;
+
+}
+
+.service-card{
+
+padding:1.6rem;
+
+}
+
+.service-price{
+
+font-size:1.7rem;
+
+}
+
+.service-badge{
+
+position:static;
+
+display:inline-block;
+
+margin-bottom:1rem;
+
+align-self:flex-start;
+
+}
+
 }

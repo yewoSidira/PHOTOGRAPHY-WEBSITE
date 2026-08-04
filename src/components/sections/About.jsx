@@ -1,57 +1,103 @@
-import React from 'react';
-import './About.css';
+import React from "react";
+import "./About.css";
+
+const features = [
+  {
+    title: "Professional Coverage",
+    description:
+      "From intimate portraits to large celebrations, every session is approached with creativity and attention to detail.",
+  },
+  {
+    title: "Natural Storytelling",
+    description:
+      "We focus on genuine emotions and authentic moments that you'll treasure for years to come.",
+  },
+  {
+    title: "Fast Delivery",
+    description:
+      "Professionally edited images delivered on time without compromising quality.",
+  },
+  {
+    title: "Client First",
+    description:
+      "Every shoot is tailored around your vision to create photographs that truly reflect your story.",
+  },
+];
 
 const About = () => {
   return (
     <section className="about-section section-padding" id="about">
+
       <div className="container">
-        <h2 className="section-title">Why Choose 23/11 Photography?</h2>
-        
+
         <div className="about-content">
+
           <div className="about-text">
+
+            <span className="about-label">
+              ABOUT 23/11 PHOTOGRAPHY
+            </span>
+
+            <h2>
+              Every Picture Has A Story.
+              <br />
+              We Make Sure It's Told Beautifully.
+            </h2>
+
             <p>
-              At <strong>23/11 Photography</strong>, we believe that every moment is worth capturing. 
-              Whether it's a wedding, birthday, or corporate event, we specialize in turning your 
-              special moments into timeless memories.
+              Based in Malawi, 23/11 Photography exists to capture life's most
+              meaningful moments with authenticity, creativity and timeless
+              quality. Whether it's a wedding, graduation, portrait or special
+              event, our goal is simple—create photographs you'll be proud to
+              revisit for years to come.
             </p>
+
             <p>
-              With years of experience and a passion for creativity, we go above and beyond to 
-              ensure that every shot is perfect. From consultation to final delivery, we work 
-              closely with you to understand your vision.
+              We believe the best photographs aren't staged—they're felt.
+              That's why every session is built around your personality, your
+              family and your story.
             </p>
-            
+
             <div className="about-features">
-              <div className="feature">
-                <span className="feature-icon">✨</span>
-                <h4>Professional Expertise</h4>
-                <p>Skilled in various styles, from candid to posed portraits</p>
-              </div>
-              <div className="feature">
-                <span className="feature-icon">📸</span>
-                <h4>State-of-the-Art Equipment</h4>
-                <p>Latest cameras and editing tools for top-notch quality</p>
-              </div>
-              <div className="feature">
-                <span className="feature-icon">💖</span>
-                <h4>Personalized Service</h4>
-                <p>Tailored to meet your specific needs and vision</p>
-              </div>
-              <div className="feature">
-                <span className="feature-icon">🎉</span>
-                <h4>Affordable Packages</h4>
-                <p>Flexible pricing to suit every budget</p>
-              </div>
+
+              {features.map((feature) => (
+
+                <div
+                  className="feature-card"
+                  key={feature.title}
+                >
+
+                  <div className="feature-line"></div>
+
+                  <div>
+
+                    <h4>{feature.title}</h4>
+
+                    <p>{feature.description}</p>
+
+                  </div>
+
+                </div>
+
+              ))}
+
             </div>
+
           </div>
-          
+
           <div className="about-image">
-            <img 
-              src="https://via.placeholder.com/600x400/1a2a3a/ffffff?text=23/11+Photography+Team" 
-              alt="23/11 Photography team at work in Malawi" 
+
+            <img
+              src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=900"
+              alt="Photographer capturing a wedding"
             />
+
           </div>
+
         </div>
+
       </div>
+
     </section>
   );
 };

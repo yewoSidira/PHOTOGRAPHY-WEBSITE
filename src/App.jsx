@@ -7,6 +7,8 @@ import Gallery from './components/sections/Gallery';
 import About from './components/sections/About';
 import Services from './components/sections/Services';
 import Booking from './components/Booking';
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import './styles/variables.css';
 import './styles/globals.css';
 import './App.css';
@@ -14,6 +16,7 @@ import './App.css';
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="App">
         <Navbar />
         <Routes>
@@ -31,6 +34,23 @@ function App() {
       </div>
     </Router>
   );
+}
+
+function ScrollToTop(){
+
+    const { pathname } = useLocation();
+
+    useEffect(() => {
+
+        window.scrollTo({
+            top:0,
+            behavior:"smooth"
+        });
+
+    },[pathname]);
+
+    return null;
+
 }
 
 export default App;

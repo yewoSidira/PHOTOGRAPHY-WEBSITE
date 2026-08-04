@@ -82,6 +82,10 @@ img {
   transform: translateY(0);
 }
 
+section{
+    scroll-margin-top:90px;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .section-title {

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import "./Navbar.css";
 
 const Navbar = () => {
@@ -35,43 +36,40 @@ const Navbar = () => {
       <div className="navbar-container">
 
 
-        <Link 
-          to="#hero" 
-          className="navbar-logo"
-          onClick={closeMenu}
-        >
+        <HashLink
+smooth
+to="/#home"
+className="navbar-logo"
+onClick={closeMenu}
+>
           <span>23/11</span>
           <small>Photography</small>
-        </Link>
+        </HashLink>
 
 
 
         <div className={`navbar-links ${menuOpen ? "active" : ""}`}>
 
-          <Link to="#hero" onClick={closeMenu}>
+          <HashLink smooth to="/#home" onClick={closeMenu}>
             Home
-          </Link>
+          </HashLink>
 
-          <a href="#gallery" onClick={closeMenu}>
+          <HashLink smooth to="/#gallery" onClick={closeMenu}>
             Gallery
-          </a>
+          </HashLink>
 
-          <a href="#about" onClick={closeMenu}>
+          <HashLink smooth to="/#about" onClick={closeMenu}>
             About
-          </a>
+          </HashLink>
 
-          <a href="#services" onClick={closeMenu}>
+          <HashLink smooth to="/#services" onClick={closeMenu}>
             Services
-          </a>
+          </HashLink>
 
 
-          <Link 
-            to="/booking" 
-            className="navbar-book"
-            onClick={closeMenu}
-          >
+          <HashLink  to="/booking" className="navbar-book" onClick={closeMenu}>
             Book Now
-          </Link>
+          </HashLink>
 
         </div>
 
