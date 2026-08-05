@@ -1,52 +1,52 @@
 import React, { useEffect, useState } from "react";
-
 import { HashLink } from "react-router-hash-link";
+import { useLocation } from "react-router-dom";
 import "./Navbar.css";
 
 const Navbar = () => {
 
+  const location = useLocation();
+
+  const isBooking = location.pathname === "/booking";
+
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-
 
   useEffect(() => {
 
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
+      setScrolled(window.scrollY > 40);
     };
 
     window.addEventListener("scroll", handleScroll);
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
 
   }, []);
-
 
   const closeMenu = () => {
     setMenuOpen(false);
   };
 
-
   return (
 
-    <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
+    <nav
+      className={`navbar
+      ${scrolled ? "scrolled" : ""}
+      ${isBooking ? "booking-navbar" : ""}`}
+    >
 
       <div className="navbar-container">
 
-
         <HashLink
-smooth
-to="/#home"
-className="navbar-logo"
-onClick={closeMenu}
->
+          smooth
+          to="/#home"
+          className="navbar-logo"
+          onClick={closeMenu}
+        >
           <span>23/11</span>
           <small>Photography</small>
         </HashLink>
-
-
 
         <div className={`navbar-links ${menuOpen ? "active" : ""}`}>
 
@@ -66,27 +66,25 @@ onClick={closeMenu}
             Services
           </HashLink>
 
-
-          <HashLink  to="/booking" className="navbar-book" onClick={closeMenu}>
+          <HashLink
+            to="/booking"
+            className="navbar-book"
+            onClick={closeMenu}
+          >
             Book Now
           </HashLink>
 
         </div>
-
-
 
         <button
           className={`menu-toggle ${menuOpen ? "open" : ""}`}
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle navigation"
         >
-
           <span></span>
           <span></span>
           <span></span>
-
         </button>
-
 
       </div>
 
@@ -95,6 +93,5 @@ onClick={closeMenu}
   );
 
 };
-
 
 export default Navbar;
