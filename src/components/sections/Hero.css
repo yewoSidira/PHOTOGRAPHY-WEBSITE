@@ -132,6 +132,7 @@
     display: flex;
     align-items: center;
     gap: 1.5rem;
+    margin-bottom: 3rem;
 }
 
 .hero-btn {
@@ -342,19 +343,17 @@ height:80px;
    SCROLL TO GALLERY
 ========================================================== */
 
+/* ==========================================================
+   SCROLL LINK
+========================================================== */
+
 .hero-scroll{
 
-    display:inline-flex;
+    display:inline-block;
 
-    align-items:center;
+    margin-top:0;   /* more space below the button */
 
-    justify-content:center;
-
-    gap:.45rem;
-
-    margin-top:2rem;
-
-    color:white;
+    color:rgba(255,255,255,.92);
 
     font-size:1rem;
 
@@ -364,8 +363,6 @@ height:80px;
 
     text-decoration:none;
 
-    opacity:.95;
-
     transition:
         color .3s ease,
         transform .3s ease,
@@ -373,6 +370,8 @@ height:80px;
 
     text-shadow:
         0 4px 16px rgba(0,0,0,.45);
+
+    animation:scrollFloat 2.2s ease-in-out infinite;
 
 }
 
@@ -384,78 +383,25 @@ height:80px;
 
 }
 
-.hero-scroll::after{
-
-    content:"";
-
-    width:22px;
-
-    height:22px;
-
-    border:2px solid rgba(255,255,255,.75);
-
-    border-radius:50%;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    transition:.3s;
-
-}
-
-.hero-scroll:hover::after{
-
-    border-color:var(--color-gold);
-
-}
-
-/* Floating animation */
-
 @keyframes scrollFloat{
 
     0%,100%{
-
         transform:translateY(0);
-
     }
 
     50%{
-
         transform:translateY(6px);
-
     }
 
 }
-
-.hero-scroll{
-
-    animation:scrollFloat 2.2s ease-in-out infinite;
-
-}
-
-
-/* ==========================================================
-   MOBILE
-========================================================== */
 
 @media(max-width:768px){
 
 .hero-scroll{
 
-    margin-top:1.5rem;
+    margin-top:2rem;
 
     font-size:.92rem;
-
-}
-
-.hero-scroll::after{
-
-    width:18px;
-
-    height:18px;
 
 }
 

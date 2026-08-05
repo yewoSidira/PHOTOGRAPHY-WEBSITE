@@ -53,7 +53,7 @@ href="#gallery"
 className="hero-scroll"
 >
 
-View Portfolio ↓
+Explore the Gallery ↓
 
 </a>
 
