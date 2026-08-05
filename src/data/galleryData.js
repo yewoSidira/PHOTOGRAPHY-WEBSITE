@@ -1,11 +1,11 @@
 
 // Import your images from the gallery folder
-import Photo2 from '../assets/images/gallery/photo2.jpg';
-import Photo3 from '../assets/images/gallery/photo3.jpg';
-import Photo10 from '../assets/images/gallery/photo10.jpg';
-import Photo12 from '../assets/images/gallery/photo12.jpg';
-import omarHakeem from '../assets/images/gallery/omar-hakeem-tXUZt640l1A-unsplash.jpg';
-import premiumPhoto from '../assets/images/gallery/premium_photo-1757100708310-c991afe87ad0.png';
+import Photo2 from '../assets/images/gallery/photo2.webp';
+import Photo3 from '../assets/images/gallery/photo3.webp';
+import Photo10 from '../assets/images/gallery/photo10.webp';
+import Photo12 from '../assets/images/gallery/photo12.webp';
+import omarHakeem from '../assets/images/gallery/omar-hakeem-tXUZt640l1A-unsplash.webp';
+import premiumPhoto from '../assets/images/gallery/premium_photo-1757100708310-c991afe87ad0.webp';
 
 export const galleryImages = [
   {
