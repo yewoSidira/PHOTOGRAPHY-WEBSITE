@@ -255,9 +255,11 @@ padding:6.5rem 0 3rem;
 
 .hero-image{
 
-background-position:70% center;
+    background-image:url("../../assets/images/gallery/hero-image-mobile.webp");
 
-transform:scale(1);
+    background-position:center center;
+
+    background-size:cover;
 
 }
 
