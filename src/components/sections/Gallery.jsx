@@ -66,7 +66,7 @@ const Gallery = () => {
 
          <button
     type="button"
-    className="btn-secondary"
+    className="btn-primary"
 >
     View Full Gallery
 </button>
