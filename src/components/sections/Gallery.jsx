@@ -64,12 +64,12 @@ const Gallery = () => {
 
         <div className="gallery-footer">
 
-          <a
-            href="#"
-            className="btn-primary"
-          >
-            View Full Portfolio
-          </a>
+         <button
+    type="button"
+    className="btn-secondary"
+>
+    View Full Gallery
+</button>
 
         </div>
 
