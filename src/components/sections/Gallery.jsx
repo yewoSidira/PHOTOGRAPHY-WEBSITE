@@ -1,11 +1,25 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { galleryImages } from "../../data/galleryData";
+import React, { useEffect, useState } from "react";
 import "./Gallery.css";
 
 const Gallery = () => {
+
+  const [galleryImages, setGalleryImages] = useState([]);
+
+  useEffect(() => {
+
+    fetch("/gallery.json")
+      .then((response) => response.json())
+      .then((data) => setGalleryImages(data))
+      .catch((error) => console.error("Error loading gallery:", error));
+
+  }, []);
+
   return (
-    <section className="gallery-section section-padding" id="gallery">
+
+    <section
+      className="gallery-section section-padding"
+      id="gallery"
+    >
 
       <div className="container">
 
@@ -14,7 +28,7 @@ const Gallery = () => {
         </h2>
 
         <p className="section-subtitle">
-          A selection of some of our favourite moments. Every photograph tells a story, and every story deserves to be remembered.
+          A small collection of moments we've had the privilege to capture.
         </p>
 
         <div className="gallery-grid">
@@ -31,6 +45,7 @@ const Gallery = () => {
                 src={image.src}
                 alt={image.alt}
                 loading="lazy"
+                decoding="async"
               />
 
               <div className="gallery-overlay">
@@ -49,26 +64,21 @@ const Gallery = () => {
 
         <div className="gallery-footer">
 
-          <button
-            className="gallery-btn gallery-btn-secondary"
-            type="button"
+          <a
+            href="#"
+            className="btn-primary"
           >
-            View Full Gallery
-          </button>
-
-          <Link
-            to="/booking"
-            className="gallery-btn gallery-btn-primary"
-          >
-            Book Your Session
-          </Link>
+            View Full Portfolio
+          </a>
 
         </div>
 
       </div>
 
     </section>
+
   );
+
 };
 
 export default Gallery;
