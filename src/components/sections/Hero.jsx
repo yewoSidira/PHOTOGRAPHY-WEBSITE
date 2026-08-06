@@ -1,70 +1,63 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { heroData } from "../../data/heroData";
 import "./Hero.css";
 
 const Hero = () => {
+  return (
+    <section id="home" className="hero">
 
-return(
+      {/* Background Image */}
+      <div
+        className="hero-image"
+        style={{
+          backgroundImage: `url(${heroData.image})`,
+        }}
+      />
 
-<section
-id="home"
-className="hero"
->
+      {/* Overlay */}
+      <div className="hero-overlay" />
 
-<div className="hero-image"/>
+      {/* Content */}
+      <div className="container hero-content">
 
-<div className="hero-overlay"/>
+        <span className="hero-tag">
+          {heroData.subtitle}
+        </span>
 
-<div className="container hero-content">
+        <h1>
+          {heroData.title}
+        </h1>
 
-<span className="hero-tag">
+        <p>
+          {heroData.description}
+        </p>
 
-Premium Photography • Malawi
+        <div className="hero-buttons">
 
-</span>
+          <Link
+            to="/booking"
+            className="hero-btn"
+          >
+            Book Your Session
+          </Link>
 
-<h1>
+          <a
+            href="#gallery"
+            className="hero-scroll"
+          >
+            View Featured Work ⬇
+          </a>
 
-Every Story Begins
-<br/>
-With A Moment.
+        </div>
 
-</h1>
+      </div>
 
-<p>
+      {/* Fade into next section */}
+      <div className="hero-fade" />
 
-Timeless photography for weddings,
-portraits, graduations and unforgettable
-celebrations across Malawi.
-
-</p>
-
-<Link
-to="/booking"
-className="hero-btn"
->
-
-Book Your Session
-
-</Link>
-
-<a
-href="#gallery"
-className="hero-scroll"
->
-
-Explore the Gallery ↓
-
-</a>
-
-</div>
-
-<div className="hero-fade"/>
-
-</section>
-
-);
-
+    </section>
+  );
 };
 
 export default Hero;
