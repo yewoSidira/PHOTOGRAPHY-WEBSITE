@@ -4,6 +4,6 @@ export const heroData = {
   description:
     "Timeless photography for weddings, graduations, portraits, corporate events and celebrations across Malawi.",
   image: "/images/hero-image.webp",
-  mobileImage: "/images/hero-image-mobile.webp",
+  mobileImage: "/images/hero-image.webp",
   alt: "Hero photography scene in Malawi",
 };
