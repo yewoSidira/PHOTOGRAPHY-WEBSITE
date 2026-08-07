@@ -147,9 +147,10 @@ const Booking = () => {
             <div className="form-grid">
 
               <div className="form-group">
-                <label>Full Name</label>
+                <label htmlFor="name">Full Name</label>
 
                 <input
+                  id="name"
                   type="text"
                   name="name"
                   value={formData.name}
@@ -160,9 +161,10 @@ const Booking = () => {
               </div>
 
               <div className="form-group">
-                <label>Phone Number</label>
+                <label htmlFor="phone">Phone Number</label>
 
                 <input
+                  id="phone"
                   type="tel"
                   name="phone"
                   value={formData.phone}
@@ -173,9 +175,10 @@ const Booking = () => {
               </div>
 
               <div className="form-group">
-                <label>Email Address</label>
+                <label htmlFor="email">Email Address</label>
 
                 <input
+                  id="email"
                   type="email"
                   name="email"
                   value={formData.email}
@@ -185,9 +188,10 @@ const Booking = () => {
               </div>
 
               <div className="form-group">
-                <label>Photography Service</label>
+                <label htmlFor="service">Photography Service</label>
 
                 <select
+                  id="service"
                   name="service"
                   value={formData.service}
                   onChange={handleChange}
@@ -215,9 +219,10 @@ const Booking = () => {
               </div>
 
               <div className="form-group">
-                <label>Preferred Date</label>
+                <label htmlFor="date">Preferred Date</label>
 
                 <input
+                  id="date"
                   type="date"
                   name="date"
                   value={formData.date}
@@ -227,9 +232,10 @@ const Booking = () => {
               </div>
 
               <div className="form-group">
-                <label>Preferred Time</label>
+                <label htmlFor="time">Preferred Time</label>
 
                 <input
+                  id="time"
                   type="time"
                   name="time"
                   value={formData.time}
@@ -238,9 +244,10 @@ const Booking = () => {
               </div>
 
               <div className="form-group full-width">
-                <label>Event Location</label>
+                <label htmlFor="location">Event Location</label>
 
                 <input
+                  id="location"
                   type="text"
                   name="location"
                   value={formData.location}
@@ -250,9 +257,10 @@ const Booking = () => {
               </div>
 
               <div className="form-group full-width">
-                <label>Estimated Budget</label>
+                <label htmlFor="budget">Estimated Budget</label>
 
                 <input
+                  id="budget"
                   type="text"
                   name="budget"
                   value={formData.budget}
@@ -262,19 +270,16 @@ const Booking = () => {
               </div>
 
               <div className="form-group full-width">
-
-                <label>
-                  Tell us about your event
-                </label>
+                <label htmlFor="message">Tell us about your event</label>
 
                 <textarea
+                  id="message"
                   rows="6"
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
                   placeholder="Share any important details about your event..."
                 />
-
               </div>
 
             </div>
