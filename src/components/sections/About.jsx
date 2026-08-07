@@ -67,8 +67,8 @@ const About = () => {
 
           <div className="about-image">
             <img
-              src="/images/gallery/photo3.webp"
-              alt="Photographer capturing a wedding"
+              src="/images/gallery/aesthetic-girl-pictures-xl7ethtg7gozi3mx.webp"
+              alt="pretty lady"
               loading="lazy"
               decoding="async"
             />
