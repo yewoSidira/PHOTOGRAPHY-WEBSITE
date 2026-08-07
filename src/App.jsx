@@ -9,11 +9,38 @@ import "./styles/variables.css";
 import "./styles/globals.css";
 import "./App.css";
 
-// Lazy-loaded components
 const Gallery = lazy(() => import("./components/sections/Gallery"));
 const About = lazy(() => import("./components/sections/About"));
 const Services = lazy(() => import("./components/sections/Services"));
 const Booking = lazy(() => import("./components/Booking"));
+
+const SectionFallback = () => (
+  <div
+    style={{
+      minHeight: "18rem",
+      background: "var(--color-bg)",
+    }}
+    aria-hidden="true"
+  />
+);
+
+const Home = () => (
+  <>
+    <Hero />
+
+    <Suspense fallback={<SectionFallback />}>
+      <Gallery />
+    </Suspense>
+
+    <Suspense fallback={<SectionFallback />}>
+      <About />
+    </Suspense>
+
+    <Suspense fallback={<SectionFallback />}>
+      <Services />
+    </Suspense>
+  </>
+);
 
 function App() {
   return (
@@ -21,41 +48,17 @@ function App() {
       <div className="App">
         <Navbar />
 
-        <Suspense
-          fallback={
-            <div
-              style={{
-                minHeight: "100vh",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                background: "var(--color-bg)",
-                color: "var(--color-primary)",
-                fontSize: "1rem",
-                fontWeight: "600",
-                letterSpacing: "0.05em",
-              }}
-            >
-              Loading...
-            </div>
-          }
-        >
-          <Routes>
-            <Route
-              path="/"
-              element={
-                <>
-                  <Hero />
-                  <Gallery />
-                  <About />
-                  <Services />
-                </>
-              }
-            />
-
-            <Route path="/booking" element={<Booking />} />
-          </Routes>
-        </Suspense>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route
+            path="/booking"
+            element={
+              <Suspense fallback={<SectionFallback />}>
+                <Booking />
+              </Suspense>
+            }
+          />
+        </Routes>
 
         <Footer />
       </div>

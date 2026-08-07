@@ -13,15 +13,14 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
-
     const handleScroll = () => {
-      setScrolled(window.scrollY > 40);
+      const nextScrolled = window.scrollY > 40;
+      setScrolled((prevScrolled) => (prevScrolled === nextScrolled ? prevScrolled : nextScrolled));
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
 
     return () => window.removeEventListener("scroll", handleScroll);
-
   }, []);
 
   const closeMenu = () => {
@@ -77,6 +76,7 @@ const Navbar = () => {
         </div>
 
         <button
+          type="button"
           className={`menu-toggle ${menuOpen ? "open" : ""}`}
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle navigation"

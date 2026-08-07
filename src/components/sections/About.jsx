@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import "./About.css";
 
 const features = [
@@ -27,16 +27,10 @@ const features = [
 const About = () => {
   return (
     <section className="about-section section-padding" id="about">
-
       <div className="container">
-
         <div className="about-content">
-
           <div className="about-text">
-
-            <span className="about-label">
-              ABOUT 23/11 PHOTOGRAPHY
-            </span>
+            <span className="about-label">ABOUT 23/11 PHOTOGRAPHY</span>
 
             <h2>
               Every Picture Has A Story.
@@ -59,47 +53,30 @@ const About = () => {
             </p>
 
             <div className="about-features">
-
               {features.map((feature) => (
-
-                <div
-                  className="feature-card"
-                  key={feature.title}
-                >
-
+                <div className="feature-card" key={feature.title}>
                   <div className="feature-line"></div>
-
                   <div>
-
                     <h4>{feature.title}</h4>
-
                     <p>{feature.description}</p>
-
                   </div>
-
                 </div>
-
               ))}
-
             </div>
-
           </div>
 
           <div className="about-image">
-
             <img
-              src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=900"
+              src="/images/gallery/photo3.webp"
               alt="Photographer capturing a wedding"
+              loading="lazy"
+              decoding="async"
             />
-
           </div>
-
         </div>
-
       </div>
-
     </section>
   );
 };
 
-export default About;
+export default memo(About);

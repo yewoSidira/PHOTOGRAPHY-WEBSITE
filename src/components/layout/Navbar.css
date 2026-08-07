@@ -20,18 +20,13 @@ background:transparent;
 transition:
 background .35s ease,
 padding .35s ease,
-box-shadow .35s ease,
-backdrop-filter .35s ease;
+box-shadow .35s ease;
 
 }
 
 .navbar.scrolled{
 
-background:rgba(14,24,34,.72);
-
-backdrop-filter:blur(18px);
-
--webkit-backdrop-filter:blur(18px);
+background:rgba(14,24,34,.9);
 
 padding:.85rem 0;
 
@@ -280,8 +275,6 @@ flex-direction:column;
 gap:1.5rem;
 
 background:rgba(26,42,58,.97);
-
-backdrop-filter:blur(18px);
 
 transform:translateY(-20px);
 
